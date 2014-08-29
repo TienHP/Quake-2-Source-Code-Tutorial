@@ -17,3 +17,38 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 */
+
+typedef enum { false, true }	qboolean;
+
+
+#define	MAX_QPATH			64		// max length of a quake game pathname
+#define	MAX_OSPATH			128		// max length of a filesystem pathname
+
+
+
+/*
+==============================================================
+
+SYSTEM SPECIFIC
+
+==============================================================
+*/
+
+int		Sys_Milliseconds(void);
+
+
+
+
+/*
+==========================================================
+
+CVARS (console variables)
+
+==========================================================
+*/
+
+// nothing outside the Cvar_*() functions should modify these fields!
+typedef struct cvar_s
+{
+	float		value;
+} cvar_t;

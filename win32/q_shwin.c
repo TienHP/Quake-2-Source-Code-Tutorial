@@ -17,3 +17,29 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 */
+
+#include "../qcommon/qcommon.h"
+#include "winquake.h"
+
+
+
+/*
+================
+Sys_Milliseconds
+================
+*/
+int	curtime;
+int Sys_Milliseconds(void)
+{
+	static int		base;
+	static qboolean	initialized = false;
+
+	if (!initialized)
+	{	// let base retain 16 bits of effectively random data
+		base = timeGetTime() & 0xffff0000;
+		initialized = true;
+	}
+	curtime = timeGetTime() - base;
+
+	return curtime;
+}

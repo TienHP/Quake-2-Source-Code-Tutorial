@@ -17,3 +17,51 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
 
 */
+// common.c -- misc functions used in client and server
+#include "qcommon.h"
+
+
+cvar_t	*dedicated;
+
+
+/*
+=============
+Com_Quit
+
+Both client and server can use this, and it will
+do the apropriate things.
+=============
+*/
+void Com_Quit(void)
+{
+	//ultimately this will shut the game down
+}
+
+/*
+=================
+Qcommon_Init
+=================
+*/
+void Qcommon_Init(int argc, char **argv)
+{
+
+}
+
+/*
+=================
+Qcommon_Frame
+=================
+*/
+void Qcommon_Frame(int msec)
+{
+
+}
+
+/*
+=================
+Qcommon_Shutdown
+=================
+*/
+void Qcommon_Shutdown(void)
+{
+}
